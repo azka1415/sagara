@@ -65,8 +65,8 @@ export const userRouter = createTRPCRouter({
 			const transport = nodemailer.createTransport({
 				service: "gmail",
 				auth: {
-					user: "azka.noreply@gmail.com",
-					pass: "bywnvvmgefvgrsnp",
+					user: env.NODE_MAILER_EMAIL,
+					pass: env.NODE_MAILER_PASSWORD,
 				},
 			});
 			transport.sendMail({
@@ -125,8 +125,8 @@ export const userRouter = createTRPCRouter({
 			const transport = nodemailer.createTransport({
 				service: "gmail",
 				auth: {
-					user: "azka.noreply@gmail.com",
-					pass: "bywnvvmgefvgrsnp",
+					user: env.NODE_MAILER_EMAIL,
+					pass: env.NODE_MAILER_PASSWORD,
 				},
 			});
 			const newPass = generatePassword();
